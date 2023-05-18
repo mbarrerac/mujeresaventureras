@@ -1,25 +1,56 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import AdminView from '../views/AdminView.vue';
+import LoginView from '../views/LoginView.vue';
+import CoursesView from '../views/CoursesView.vue';
+import NotFound from '../views/NotFound.vue';
+import UserListEvent from '../views/UserListEvent.vue';
+import miFraseView from '../views/miFraseView.vue';
+
+
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/:archivoJson?',
+    name: 'HomeView',
+    component: HomeView,
+    beforeEnter: (to, from, next) => {
+      const archivoJson = to.params.archivoJson || 'imagenes';
+      to.params.archivoJson = archivoJson;
+      next();
+    }
+  },
+  { 
+    path: "/LoginView",
+    name: "LoginView",
+    component: LoginView
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
-]
+    path: '/AdminView',
+    name: 'AdminView',
+    component: AdminView
+  },
+  {
+    path: '/CoursesView',
+    name: 'CoursesView',
+    component: CoursesView
+  },
+  {
+    path: '/UserListEvent',
+    name: 'UserListEvent',
+    component: UserListEvent
+  },
+  {
+    path: '/miFraseView',
+    name: 'miFraseView',
+    component: miFraseView
+  },
+  { path: '/:catchAll(.*)', component: NotFound }
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes
-})
+});
 
-export default router
+export default router;
