@@ -58,8 +58,8 @@ Se utilizo bootstrap en la gran mayoria del proyecto visualizado en componentes 
 
 ## 6 -Código mantenible mediante componentes
 Estructura vue CLI mediante componentes y SPA <br/>  
-![componente:AdmAgenda.vue](src/assets/readmeImg/AdminView.png)<br/>
-[src/views/AdmAgenda.vue](src/views/AdminView.vue) --linea 12
+![componente:AdmView.vue](src/assets/readmeImg/AdminView.png)<br/>
+[src/views/AdmView.vue](src/views/AdminView.vue) --linea 12
 
 ## 7- Utilizacion de los metodos del ciclo de vida de un componente
 Se implemento el uso de ciclo de vida mounted/created en algunos de los componentes<br/>
@@ -87,31 +87,31 @@ Rutas por defecto  <br/>
 
 ## 10- Utilizacion de sintaxis basica JavaScript
 Utilizacion de declaracion de variables y metodos de formateo en javascript
-![componente:BodyService.vue](src/assets/img/readmeImg/courseView.png)<br/>
+![componente:CoursesView.vue](src/assets/readmeImg/courseView.png)<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 242/265--<br/>
 
 ## 11- Utilizacion de Javascript es6/7 para resolver un problema
 Se utiliza es6 en el proyecto en la gran mayoria de los componentes<br/>  
-![componente:BodyService.vue](src/assets/img/readmeImg/courseView.png)<br/>
+![componente:CoursesView.vue](src/assets/readmeImg/courseView.png)<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 242/265--<br/>
  
 ## 12- Consumo API
 Se utiliza el consumo de una API que proporciona los valores de indicadores economicos
 se manejan errores en cualquier caso<br/>
-![componente:BodyService.vue](src/assets/img/readmeImg/courseView2.png)<br/>
+![componente:CoursesView.vue](src/assets/readmeImg/courseView2.png)<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 415/429--<br/>
 
 ## 13-Estados internos de los componentes web
 Utilizacion de estado de objeto data dentro del componente(error/stateMsg)
-![componente:BodyService.vue](src/assets/img/readmeImg/courseView3.png)<br/>
+![componente:CoursesView.vue](src/assets/readmeImg/courseView3.png)<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 166/168--<br/>
 
-![componente:BodyService.vue](src/assets/img/readmeImg/courseView3.png)<br/>
+![componente:CoursesView.vue](src/assets/readmeImg/courseView3.png)<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 93/98--<br/>
 
 ## 14- Maneja el estado de la aplicación con Vuex
 Manejo de estados y consumo de servicio REST por medio de estructura de Vuex action<br/>
-![componente:BodyService.vue](src/assets/img/readmeImg/courseView2.png)<br/>
+![componente:CoursesView.vue](src/assets/readmeImg/courseView2.png)<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 415/429--<br/>
 
 ## Project setup

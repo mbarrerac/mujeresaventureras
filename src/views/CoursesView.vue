@@ -6,11 +6,6 @@
     <div class="subtitulo py-3 ">
         <p>Recuerda que somos una comunidad de mujeres</p>
     </div>
-
-   
-
-
-
     <div class="container mt-5">
         <div class="row justify-content-center py-5" v-if="($store.state.actividadesTotal.length) == 0">
              <div class="col-auto">
