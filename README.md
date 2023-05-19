@@ -102,7 +102,7 @@ se manejan errores en cualquier caso<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 415/429--<br/>
 
 ## 13-Estados internos de los componentes web
-Utilizacion de estado de objeto data dentro del componente(error/stateMsg)
+Utilizacion de estado de objeto data dentro del componente (error/stateMsg)
 ![componente:CoursesView.vue](src/assets/readmeImg/courseView3.png)<br/>
 [src/views/CoursesView.vue](src/views/CoursesView.vue) --linea 166/168--<br/>
 
