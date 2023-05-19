@@ -35,7 +35,7 @@
                         
                         <!-- <button  @click="validarCampos(curso)" :class = " curso.estado === 'Activo' ? 'btnInscribir' : 'btnDisabled'" :disabled="curso.estado === 'Activo' ">{{curso.estado === 'Activo' ? 'Inscribirme' : 'No disponible' }}</button>  -->
                         <button @click="validarCampos(curso)" class="btnInscribir">Inscribir</button>
-                        <button @click="desIncribir(curso)" class="btnInscribir">DesIncribir</button>
+                        <button @click="desIncribir(curso)" class="btnInscribir">DesInscribir</button>
                   
                         <!-- <button :class = " curso.estado === 'Activo' ? 'btnInscribir' : 'btnDisabled'" :disabled="curso.estado === 'Activo' ">{{curso.estado === 'Activo' ? 'Desinscribirme' : 'No disponible' }}</button> -->
                 
