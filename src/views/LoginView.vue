@@ -110,23 +110,13 @@ export default {
           this.$store.state.usuarioConectado= this.loginForm.email,
         );
         this.$store.commit(SET_LOGIN_STATE, true);
-        // this.$router.push({ name: "HomeView" });
         this.$router.push({ name: 'HomeView', params: { archivoJson: 'imagenes' } });
-
-        // this.error= "";
         this.extraerUsuarios(1,this.loginForm.email)
-    
-        // this.$store.commit(cambiaEstadoLogin);
       } catch (err) {
         this.showAlert("Error: Uusuario no registrado")
-
-        // this.showAlert("Error: "+ err.message)
         this.$store.state.loginUsuario=true,
         this.$store.state.loginAdmin=false                 
-        // this.error = "Usuario o clave incorrecta";
-
-        // this.$store.commit(cambiaEstadoLoginFalse);
-        // this.$store.commit(SET_LOGIN_STATE, false);
+ 
       }
     },
 
@@ -190,12 +180,7 @@ export default {
              this.$store.state.usuarioConectado = this.loginForm.email1
              this.showAlert("Usuario registrado correctamente")
              this.$store.commit(SET_LOGIN_STATE, true);
-            //  this.$router.push({ name: "HomeView" });
              this.$router.push({ name: 'HomeView', params: { archivoJson: 'imagenes' } });
-            
-             
-            //  this.$store.commit(cambiaEstadoLogin);
-             //
          })
          .catch((error) => {
                this.$store.state.usuarioConectado='';
@@ -210,8 +195,6 @@ export default {
                   this.showAlert("Error: "+error.message)
                }
                }
-          
-              //  this.$store.commit(cambiaEstadoLogin);
                this.$store.commit(SET_LOGIN_STATE, false);
          });
       
@@ -221,12 +204,7 @@ export default {
     buscarUsuario(llega){
      
          this.$store.state.usuarios = this.$store.state.usuariosTotal;
-        //  const searchTerm = this.loginForm.email.toLowerCase();
-        //  this.$store.state.usuarios = this.$store.state.usuarios.filter(element => {
-        //       const name1 = element.email.toLowerCase();
-        //       return name1.includes(searchTerm)  ;
-        //  })
-        const usuario = this.$store.state.usuarios.find(u => u.email === llega);
+         const usuario = this.$store.state.usuarios.find(u => u.email === llega);
         return usuario ? usuario.estado : null;
 
       
@@ -243,17 +221,13 @@ export default {
   mounted() {
 
     // Para obtener el usuario con sesión activa -> método onAuthStateChanged 
-      // this.$store.commit(cambiaEstadoLoginFalse);
       this.$store.commit(SET_LOGIN_STATE, false);
       auth.onAuthStateChanged((user) =>{
            this.$store.state.usuarioConectado=user.email
            this.showAlert("Sesión iniciada")
            this.$store.commit(SET_LOGIN_STATE, true);
-          //  this.$router.push({ name: "HomeView" });
            this.$router.push({ name: 'HomeView', params: { archivoJson: 'imagenes' } });
-
            this.extraerUsuarios(1,user.email)
-          //  this.$store.commit(cambiaEstadoLogin);
       });
   },
 }

@@ -1,3 +1,4 @@
+
 <template>
     <div class="titulo">
          <h2>Inscríbete a nuestras aventuras</h2>

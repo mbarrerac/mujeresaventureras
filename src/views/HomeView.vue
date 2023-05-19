@@ -39,7 +39,6 @@ export default {
     async extraerImagen() {
       let resultado;
       try {
-        // const response = await fetch("../../imagenes.json");
         const response = await fetch(this.parametros);
         if (!response.ok) {
           this.showAlert("No se pudo obtener el archivo de datos", "(imagenes.json)");
